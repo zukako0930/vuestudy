@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue.js test</title>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<div id="app1">
+  <div v-text="message"></div>
+  {{ message }}
+</div>
+</body>
+<script>
+new Vue({
+ el:"#app1",
+ data:{
+   message:""
+ },
+ mounted(){
+     this.message = "Hello World!"
+ }
+})
+</script>
+
+</html>

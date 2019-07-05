@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue.js test</title>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<div id="app3">
+<input type="checkbox" @click="change" checked>
+<!-- v-ifはv-elseとセット -->
+<span v-if="seen">Hello World</span>
+<span v-else>Goodbye</span>
+</div>
+</body>
+<script>
+new Vue({
+ el:"#app3",
+ data:{
+   message:"",
+   seen: true 
+ },
+ mounted(){
+     this.message = "Hello World!"
+ },
+ methods: {
+   change(e){
+       this.seen = e.target.checked
+   }
+ }
+})
+</script>
+
+</html>
